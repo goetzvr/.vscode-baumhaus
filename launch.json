@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "gdb_nimblink",
+            "type": "gdb",
+            "request": "attach",
+            "executable": "${workspaceRoot}/bin/targets/nimblink/app/apps/nimblink/nimblink.elf",
+            "target": ":3333",
+            "cwd": "${workspaceRoot}",
+            "gdbpath": "/usr/bin/arm-none-eabi-gdb",
+            "remote": true
+
+        }
+    ]
+}

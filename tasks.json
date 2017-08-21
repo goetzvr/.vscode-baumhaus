@@ -1,0 +1,60 @@
+{
+//    "version": "0.1.0",
+    "command": "newt",
+    "echoCommand": true,
+    "isShellCommand": true,
+
+    "tasks": [
+        {
+            "taskName": "build_nimblink",
+            "args": [
+                "build",
+                "nimblink"
+            ],
+            "isBuildCommand": true,
+            "suppressTaskName": true,
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": [
+                    "relative",
+                    "${workspaceRoot}"
+                ],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "taskName": "create_nimblink",
+            "args": [
+                "create-image",
+                "nimblink",
+                "1.0.0"
+            ],
+            "suppressTaskName": true
+        },
+        {
+            "taskName": "debug_nimblink",
+            "args": [
+                "debug",
+                "nimblink",
+                "-n"
+            ],
+            "suppressTaskName": true
+        },
+        {
+            "taskName": "load_nimblink",
+            "args": [
+                "load",
+                "nimblink"
+            ],
+            "suppressTaskName": true,
+            "problemMatcher": []
+        }
+    ]
+}
